@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summary</title>
+</head>
+
+<body>
+
+    <h1>dom maniputation summary</h1>
+    <!-- option 01 -->
+    <button onclick="makeGreeen()">make green</button> <br> <br>
+
+    <!-- option 02 -->
+    <button id="make-red">make red</button>
+    <br> <br>
+
+    <!-- option 03 -->
+    <input type="email" id="input-field">
+
+
+    <script>
+        // option 01 js
+        function makeGreeen() {
+            document.body.style.backgroundColor = 'green';
+        }
+
+
+        // option 02 js
+        document.getElementById('make-red').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'red';
+        })
+
+
+        // option 03 js
+        document.getElementById('input-field').addEventListener('keyup', function(event){
+                console.log(event);
+                console.log(event.target);
+                console.log(event.target.value);
+        })
+
+
+    </script>
+
+</body>
+
+</html>
